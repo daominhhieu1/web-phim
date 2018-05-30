@@ -40,7 +40,7 @@ window.onload = function(){
         var errors = false;
         var reg_mail = /^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
         var reg_user = /^[A-Za-z0-9_]+([_\.\-]?[A-Za-z0-9])$/;
-        var reg_pass = /^[A-Za-z0-9][!@#$%^&*_+]{10,}$/;
+        var reg_pass = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{10,}$/;
         for(var i=0; i<inputs.length; i++){
             var value = inputs[i].value;
             var id = inputs[i].getAttribute('id');
@@ -61,7 +61,7 @@ window.onload = function(){
                 }
                 // Kiểm tra password
                 if(id == 'password'){
-                    if(reg_pass.test(value) == false){span.innerHTML ='<span style="color:red;padding-top: 13px;">Mật khẩu phải ít nhất 10 ký tự và có chữ hoa, chữ thường và số</span>';}
+                    if(reg_pass.test(value) == false){span.innerHTML ='<span style="color:red;padding-top: 13px;">Mật khẩu phải ít nhất 10 ký tự và có chữ hoa, chữ thường và số,kí tự đặc biệt</span>';}
                     var pass = value;
                 }
                 // Kiểm tra password nhập lại

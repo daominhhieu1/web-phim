@@ -12,7 +12,7 @@ class AdminDanhMucController extends Controller
 // action này in ra danh sách nhà sản xuất
         $this->layout->tieu_de = "Danh sách danh mục";
         $this->layout->meta_des ="Trang quản trị| Danh sách Danh Mục ";
-        $this->view->title = "DANH Mục";
+        $this->view->title = "DANH MỤC";
         // admin-banner-qc
         // LOAD MODEL
 

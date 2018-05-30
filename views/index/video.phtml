@@ -35,7 +35,7 @@ $file = '[{"type": "video/mp4", "label": "HD", "file": "'.$linkdown.'"}]';
                     $ten_film = ConvertKhongDau($row['ten_film']);
                     $ten_film_english = ConvertKhongDau($row['ten_film_english']);
                     $video_path = video_path;
-                    echo "<li class='list-tap'><a class='a-tap' href='$video_path/$ten_film-$ten_film_english-{$row['id_film']}1/tap-{$row['ten_tap']}/'>Tập {$row['ten_tap']}</a></li>";
+                    echo "<li class='list-tap'><a class='a-tap' href='$video_path/$ten_film-$ten_film_english-{$row['id_film']}.1/tap-{$row['ten_tap']}/'>Tập {$row['ten_tap']}</a></li>";
                     }
                 ?>
             </ul>

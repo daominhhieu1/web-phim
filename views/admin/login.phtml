@@ -1,3 +1,12 @@
+<?php
+  if (isset($_SESSION['auth']->id) && $_SESSION['auth']->id_nhom_user == 3) {
+
+    header('location: '.base_url);
+  
+    
+  }
+
+?>
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +49,8 @@
 
   <?php
     if(isset($this->view->msg))
-        echo "<p>".$this->view->msg."</p>";
+      header("location: ".base_url);
+        //echo "<p>".$this->view->msg."</p>";
     ?>
       <div class="container">
         <div id="login-box">

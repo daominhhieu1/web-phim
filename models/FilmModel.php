@@ -418,7 +418,7 @@ limit 8";
 
     }
     public function getSlide(){
-        $sql = "SELECT tb_slide.*,ten_film,ten_tap FROM tb_slide,tb_film,tb_tap_film WHERE tb_film.id = tb_slide.id_film AND tb_film.id = tb_tap_film.id_film ORDER BY tb_slide.id DESC LIMIT 8";
+        $sql = "SELECT * FROM tb_slide,tb_film WHERE tb_film.id = tb_slide.id_film ORDER BY tb_slide.id DESC LIMIT 8";
         $res = $this->ExecQuery($sql); // hàm exec này được kế thừa từ lớp cha MyModel.
 
         $data = array();
